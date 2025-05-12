@@ -4,8 +4,6 @@ import requests
 
 from get_new_private_placement_announcement import check_new_announcements  # 匯入函式
 
-
-
 def notify_discord_webhook(msg):
     url = 'https://discord.com/api/webhooks/1326826743834607687/Q59_5WctCarfs4--sSwBa0cvaKDZLbXFQvsUIMv3GJU53FOAC2Bfr_WxKBhoGFIrrZ7G'
     headers = {"Content-Type": "application/json"}
