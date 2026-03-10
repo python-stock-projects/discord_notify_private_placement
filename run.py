@@ -1,11 +1,12 @@
 
 import sys
+import os
 import requests
 
 from get_new_private_placement_announcement import check_new_announcements  # 匯入函式
 
 def notify_discord_webhook(msg):
-    url = 'https://discord.com/api/webhooks/1326826743834607687/Q59_5WctCarfs4--sSwBa0cvaKDZLbXFQvsUIMv3GJU53FOAC2Bfr_WxKBhoGFIrrZ7G'
+    url = os.environ.get('DISCORD_WEBHOOK_URL')
     headers = {"Content-Type": "application/json"}
     data = {"content": msg, "username": "公告-私募"}
     res = requests.post(url, headers = headers, json = data) 
